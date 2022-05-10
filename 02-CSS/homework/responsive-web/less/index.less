@@ -60,3 +60,52 @@ footer{
 
 
 //media
+
+@media (max-width:814px) {
+    .img-container{
+        width: 100%;
+        padding: 0 20px;
+        img{
+            width: 100%;
+            margin:  0 0;
+        }
+    }
+}
+@media (max-width:500px) {
+    .home{
+        .music-images{
+            img:nth-child(1){
+                width: 100%;
+            }
+        }
+    }
+    .home{
+        .music-images{
+            img:nth-child(2){
+                display: none;
+            }
+        }
+    }
+    .home .music-images img:nth-child(3){
+        display: none;
+    }
+    .home{
+        .actual{
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 0px;
+            text-align: center;
+            align-items: center;
+            .actual-img{
+                width: 100%;
+                margin:0;
+                padding: 0 10px;
+                img{
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
