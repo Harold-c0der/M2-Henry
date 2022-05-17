@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#mycard{
+  border: 1px solid rgb(179, 178, 178);
+  background-color: rgb(185, 185, 185);
+  border-radius: 3px;
+  width: 24%;
+  margin: 10px auto;
+
+}
+#mycard .boton{
+  text-align: right;
+}
+#mycard .boton button{
+  background-color:rgb(161, 161, 161); 
+  border: none;
+  color: black;
+}
+#mycard .bottom-date{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mycard .bottom-date .maxmin{
+  width: 100%;
+  display: grid;
+  grid-template-columns:repeat(2,1fr)  ;
+  grid-template-rows:repeat(2,1fr);
+}
