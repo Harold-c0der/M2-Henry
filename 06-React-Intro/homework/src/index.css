@@ -1,10 +1,117 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./imgo.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/* estilos de la nav bar */
+
+nav p{
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 900;
+  text-align: left;
+  /* text-shadow: 0px 0px 10px white ,4px 4px 20px rgb(195, 0, 255); */
+  
+}
+nav .Text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav .Text img{
+  width: 300px;
+  height: 300px;
+  /* filter: drop-shadow(0px 0px 5px rgb(255, 255, 255)) drop-shadow(6px 6px 10px rgb(195, 0, 255)); */
+}
+
+.form-Container{
+  background-color: rgba(156, 155, 155, 0.377);
+  backdrop-filter: blur(10px);
+  -moz-osx-backdrop-filter: blur(10px);
+}
+.form-Container .from{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-Container .from a{
+  display: block;
+  text-decoration: none;
+  color: rgb(43, 35, 58);
+  padding: 5px;
+  /* font-family: 'Dancing Script', cursive; */
+  font-size: 30px;
+  font-weight: 700;
+  transition: .2s;
+  margin: 10px;
+}
+.form-Container .from a:hover{
+  text-decoration: none;
+  transform: translateX(6px);
+
+}
+
+form input{
+  border: none;
+  background-color: rgba(255, 255, 255, 0.253);
+  outline: none;
+  margin: 10px ;
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: 7px;
+  display: block;
+  box-shadow: inset 0px 2px 5px rgb(90, 90, 90);
+  padding-right: 40px;
+}
+
+form{
+  position: relative;
+}
+
+
+nav button{
+  position: absolute;
+  padding-left: 6px;
+  line-height: 2px;
+  color: rgb(111, 58, 196);
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid gray;
+  font-size: 24px;
+  height: 35px;
+  top: 12px;
+  right: 20px;
+  transition: .2s;
+}
+nav button:hover{
+ color: rgb(7, 7, 7);
+}
+
+
+
+.jumbotron{
+  background-color: rgba(182, 182, 182, 0.3);
+  color: black;
+  backdrop-filter: blur(10px);
+  -moz-osx-backdrop-filter: blur(10px);
+}
+
+.cards-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 code {
@@ -13,20 +120,35 @@ code {
 }
 
 #mycard{
-  border: 1px solid rgb(179, 178, 178);
-  background-color: rgb(185, 185, 185);
-  border-radius: 3px;
-  width: 24%;
-  margin: 10px auto;
+  border: none;
+  background-color: rgba(206, 206, 206, 0.308);
+  width: 20%;
+  min-width: 250px;
+  margin: 20px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -moz-osx-backdrop-filter: blur(10px);
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.329) ;
+  transition: .2s;
 
+}
+
+#mycard:hover{
+  transform: translateY(5px);
 }
 #mycard .boton{
   text-align: right;
 }
 #mycard .boton button{
-  background-color:rgb(161, 161, 161); 
+  width: 23px;
+  border-radius: 50%;
+  font-weight: 900;
+  margin: 5px;
+  background-color:black; 
+  opacity: .3;
+  color: white;
+  text-align: center;
   border: none;
-  color: black;
 }
 #mycard .bottom-date{
   display: flex;
@@ -39,4 +161,40 @@ code {
   display: grid;
   grid-template-columns:repeat(2,1fr)  ;
   grid-template-rows:repeat(2,1fr);
+}
+
+@media (max-width:923px) {
+  nav .Text p{
+    font-size: 30px;
+  }
+}
+@media (max-width:714px) {
+  nav .Text img{
+    display: none;
+  }
+}
+@media (max-width:504px) {
+  nav .Text img{
+    display: none;
+  }
+  nav .Text p{
+    font-size: 200%;
+  }
+}
+@media (max-width:485px) {
+  .form-Container .from{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  nav .Text p{
+    font-size: 25px;
+    text-align: center;
+  }
+}
+@media (max-width:358px) {
+  nav .Text p{
+    font-size: 20px;
+  }
 }

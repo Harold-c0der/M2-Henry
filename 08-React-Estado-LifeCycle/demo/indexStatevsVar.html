@@ -23,7 +23,7 @@
       this.variable = this.props.contador
       this.incrementoContador= this.incrementoContador.bind(this);
     }
-    
+    // las arrow functions setean el estado 
     onButtonClick = () => {
       this.setState((state) => {
           return {contador: state.contador + 1}

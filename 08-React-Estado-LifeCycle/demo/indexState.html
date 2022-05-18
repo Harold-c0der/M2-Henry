@@ -20,7 +20,9 @@
         this.state = {
           contador: this.props.numero
         }
-        // this.onButtonClick = this.onButtonClick.bind(this);
+        //es importanticimos bindear el this 
+        // solo si no estas usando una arrow function 
+        this.onButtonClick = this.onButtonClick.bind(this);
       }
 
       // onButtonClick(){
@@ -29,14 +31,15 @@
       //     contador: this.state.contador + 1,
       //   });
       // }
-
+      //modifica el estado
+      //el this en las arrow functions son bindeadas automaticamente
       onButtonClick = () => {
         console.log('this arrow', this)
         this.setState({
           contador: this.state.contador + 1
         })
       }
-
+      // cada vez que hgao click se modifica el estado
       render() {
         return (
           <div>

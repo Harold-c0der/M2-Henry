@@ -1,20 +1,20 @@
 import React from 'react';
 
-export default function Card(props) {
-  const URL =  `http://openweathermap.org/img/wn/${props.img}@2x.png`
+export default function Card({max,min,name,img,onClose}) {
+  const URL =  `http://openweathermap.org/img/wn/${img}@2x.png`
   // acá va tu código
   return(
     <div id='mycard'>
-      <div class='boton'>
-        <button class='btn-danger' onClick={props.onClick}>X</button>
+      <div className='boton'>
+        <button className='btn-danger' onClick={onClose}> - </button>
       </div>
-        <h5>{props.name}</h5>
-        <div class='bottom-date'>
-          <div class='maxmin'>
+        <h5> - {name} -</h5>
+        <div className='bottom-date'>
+          <div className='maxmin'>
         <span>Max</span> 
         <span>Min</span>  
-        <span>{props.max}</span> 
-        <span>{props.min}</span>
+        <span>{max}°C</span> 
+        <span>{min}°C</span>
           </div>
         <img src= {URL} alt="" />
         </div>
